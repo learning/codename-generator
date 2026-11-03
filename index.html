@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A 120-cycle project codename generator." />
+    <title>Codename Generator</title>
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body>
+    <main class="generator">
+      <header class="masthead">
+        <p class="wordmark">Codename Generator</p>
+        <output class="cycle-count" id="position" aria-label="Current cycle position">001</output>
+      </header>
+
+      <section class="result" aria-labelledby="codename">
+        <div class="roots" aria-label="Codename roots">
+          <span id="adjective">Brave</span>
+          <span class="root-separator" aria-hidden="true">+</span>
+          <span id="noun">Arc</span>
+        </div>
+        <h1 id="codename" aria-live="polite">BraveArc</h1>
+      </section>
+
+      <section class="selector" aria-label="Codename selector">
+        <div class="selector-heading">
+          <label for="cycle-slider">Cycle position</label>
+          <output id="range-value" for="cycle-slider">1</output>
+        </div>
+        <input id="cycle-slider" type="range" min="1" max="120" step="1" value="1" />
+        <div class="range-limits" aria-hidden="true">
+          <span>1</span>
+          <span>120</span>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="js/app.mjs"></script>
+  </body>
+</html>
